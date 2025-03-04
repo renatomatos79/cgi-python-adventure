@@ -192,5 +192,6 @@ python app.py
 ```
 
 # Let me run a quick demo presenting what we did so far
-![img.png](img.png)
+![demo](https://github.com/user-attachments/assets/2dd2697b-fa14-4858-85bf-0d3c773d8e3c)
+
 
