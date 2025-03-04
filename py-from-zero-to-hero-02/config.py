@@ -6,9 +6,6 @@ load_dotenv()
 
 class Config:
     """Base config"""
-    # The SECRET_KEY is used to generate secure CSRF tokens
-    # encrypts and signs the session cookies to prevent tampering
-    # required to sign JSON Web Tokens (JWTs) which also prevents unauthorized modifications of JWT tokens
     SECRET_KEY = os.environ.get("APP_SECRET_KEY", "default_secret_key")
     SQLALCHEMY_DATABASE_URI = os.environ.get("APP_DB_URL", "sqlite:///dev_users.db")
     SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -1,5 +1,6 @@
 # Dynamic env
 **/capp/
+**/adminapi/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
