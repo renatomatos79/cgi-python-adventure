@@ -338,3 +338,8 @@ docker build -t flask-app .
 ```
 docker run -d --name flask-container -p 8000:80 -e APP_SECRET_KEY=super_key_123 -e APP_DB_URL=sqlite:///dev_users.db -e APP_ENV=production flask-app
 ```
+
+# So, let's run a quick demo to showcase what we've accomplished so far.
+<p align="center">
+  <img src="https://github.com/renatomatos79/cgi-python-adventure/blob/main/images/demo-api.gif" height="400px" width="100%" alt="consoleapp">
+</p>
