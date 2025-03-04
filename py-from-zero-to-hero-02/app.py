@@ -1,23 +1,24 @@
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
 
 # Import the config class
 from config import config_class
+
+# Import the database and model
+from database import db, User
 
 app = Flask(__name__)
 
 # Load configurations from config.py
 app.config.from_object(config_class)
 
-db = SQLAlchemy(app)
-
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
+# Bind SQLAlchemy to Flask app
+db.init_app(app)
 
 # Initialize Database
 with app.app_context():
     db.create_all()
+
+# CRUD Routes
 
 # Create (POST)
 @app.route('/users', methods=['POST'])
