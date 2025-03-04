@@ -10,13 +10,13 @@ https://www.python.org/downloads/release/python-3132/
 
 # Let´s build our first project
 
-### Add a new folder
+### Add a new folder "py-from-zero-to-hero-01"
 ```
 mkdir py-from-zero-to-hero-01
 cd py-from-zero-to-hero-01
 ```
 
-### So, then let´s build a new env named "capp"
+### So, then let´s build a dynamic environment named "capp"
 ```
 python -m venv capp (capp is just an alias for "Console Application")
 ```
@@ -26,24 +26,25 @@ python -m venv capp (capp is just an alias for "Console Application")
 .\capp\Scripts\activate
 ```
 
-### Rather than installing packages one by one, let´s use our dependencies file
+### Rather than installing packages one by one, let´s use our dependencies file :)
 ```
 pip install -r .\requirements.txt
 ```
 
-### Finally, we should confirm our installed packages
+### Finally, we should confirm whether our packages were properly installed
 ```
 pip list
 ```
 
-### Don´t run this command right now! This is just a minor note showing us how to proceed and "deactivate" some environment 
+### Please, don´t run this command right now! 
+### This is just a minor note demoing how to "deactivate" a dyn env 
 ```
 .\capp\Scripts\deactivate
 ```
 
-## Mapping a SQLite database
+## Time to play with Database
 
-### Create a file named database.py and paste the script below
+### (1) Create a file named database.py and paste the script below
 ```
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -59,21 +60,19 @@ engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
 ```
 
-The script above imports two functions: **create_engine** and **sessionmaker** 
-from **sqlalchemy** package in order to map/create a database "users_groups.db"
+The script above imports the create_engine and sessionmaker functions from the SQLAlchemy package to set up and map the users_groups.db database.
+At the bottom, these two objects are now available for import:
 
-At the bottom these two object are now available to be imported:
 - engine
 - SessionLocal
 
-So now we are available to provide a new isolated session to interact
-with the database using
+This allows us to create a new isolated session to interact with the database.
 ```
 session = SessionLocal()
 user = session.query(User).first() 
 ```
 
-And over the engine object we should provide our Entity Models
+And leveraging the engine object let´s provide our Entity Models
 ```
 from sqlalchemy.orm import declarative_base
 
@@ -89,7 +88,7 @@ name = Column(String, nullable=False)
 Base.metadata.create_all(engine)
 ```
 
-### Create a file named model.py and paste the script below
+### (2) Create a file named model.py and paste the script below
 ```
 from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from sqlalchemy.orm import relationship, declarative_base
@@ -137,7 +136,7 @@ __tablename__ = "groups"
 Base.metadata.create_all(engine)
 ```
 
-### So, finally, let´s put everything together adding a new file named app.py
+### So, finally, let´s put everything together adding a new file named "app.py"
 ```
 from sqlalchemy.orm import Session
 from models import User, Group
@@ -191,7 +190,7 @@ if __name__ == "__main__":
 python app.py
 ```
 
-# Let me run a quick demo presenting what we did so far
+# So, let's run a quick demo to showcase what we've accomplished so far.
 ![demo](https://github.com/user-attachments/assets/2dd2697b-fa14-4858-85bf-0d3c773d8e3c)
 
 
