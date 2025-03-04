@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f139cf84-3a20-4694-816e-a75762b8d5bc" alt="adventure">
+</p>
+
+
 # Quick setup
 
 ## Starting with a fresh git project
