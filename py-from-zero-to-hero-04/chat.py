@@ -33,7 +33,9 @@ def ask_question(question):
     }
     response = requests.post(url, json=payload)
     if response.status_code == 200:
-        return response.json().get("answer", "Error trying to get the server answer.")
+       return response.json().get("answer", "Error trying to get the server answer.")
+    if response.status_code in [400, 404]:
+       return response.json().get("error", "Error trying to get the server answer.")
     return f"Erro: {response.status_code} - {response.text}"
 
 # load messages
