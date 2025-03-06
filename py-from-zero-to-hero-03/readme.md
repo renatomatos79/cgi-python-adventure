@@ -1,10 +1,3 @@
-<p align="center">
-  <img src="https://github.com/renatomatos79/cgi-python-adventure/blob/main/images/demo-openai-llm.gif" height="100%" width="400px" alt="LLMAPI">
-</p>
-
-
-# Quick setup
-
 # Let´s build our LLM api
 
 ### Add a new folder "py-from-zero-to-hero-03"
@@ -108,7 +101,7 @@ class Order(db.Model):
     order_value = Column(Numeric(15,2), nullable=False)
 ```
 
-### (1.5) Add an util file named util.py
+### (1.5) Add a file named util.py
 
 We will use this file to reuse the following common functions:
 - load_documents: Loads files from disk and converts them into langchain.docstore.document.Document objects.
