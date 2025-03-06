@@ -7,7 +7,7 @@
 
 # Let´s build our first api
 
-### Add a new folder "py-from-zero-to-hero-01"
+### Add a new folder "py-from-zero-to-hero-02"
 ```
 mkdir py-from-zero-to-hero-02
 cd py-from-zero-to-hero-02
