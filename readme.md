@@ -25,7 +25,8 @@ A Flask-based web API with best practices for:
 - Running a Dockerized Flask API for scalable deployment 🐳 
 - Using SQLAlchemy for database interactions 📊 
 
-## (3) py-from-zero-to-hero-03 
+## (3) py-from-zero-to-hero-03
+### 🤖 What is it?
 Building upon everything we accomplished in the previous project, we are now expanding our API with new features as we embark on our journey into the world of LLMs. The enhancements include:
 
 - Utilizing an LLM to determine the topic the user is inquiring about.
@@ -34,6 +35,7 @@ Building upon everything we accomplished in the previous project, we are now exp
 - Lastly, if the user initiates a topic that is not covered by the API, the application returns an appropriate error response.
 
 ## (4) py-from-zero-to-hero-04
+### 🗨️🤖 What is it?
 In this final module, we will introduce this fantastic library. 
 Instead of manually sending JSON requests to our API, 
 we'll leverage a chat assistant to help us to extract the backend information we need more efficiently.
