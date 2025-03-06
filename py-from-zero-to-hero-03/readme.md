@@ -173,3 +173,7 @@ that retrieves relevant documents from a vector database and maintains conversat
 python app.py
 ```
 
+### So, let's run a quick demo to showcase what we've accomplished so far.
+<p align="center">
+  <img src="https://github.com/renatomatos79/cgi-python-adventure/blob/main/images/demo-openai-llm.gif" height="400px" width="100%" alt="LLM API Demo">
+</p>
